@@ -1,78 +1,12 @@
-# Competitive Programming Helper (cph)
+# Competitive Programming Helper (cph) + C#
+C# 호환 가능
 
-[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fagrawal-d%2Fcph%2Fbadge%3Fref%3Dmain&style=flat)](https://actions-badge.atrox.dev/agrawal-d/cph/goto?ref=main)
-[![Downloads](https://img.shields.io/visual-studio-marketplace/d/DivyanshuAgrawal.competitive-programming-helper)](https://marketplace.visualstudio.com/items?itemName=DivyanshuAgrawal.competitive-programming-helper)
+오직 Test Case Judge 기능 호환에만 중점을 두고 수정 함.
 
-Quickly compile, run and judge competitive programming problems in VS Code.
-Automatically download testcases , or write & test your own problems. Once you
-are done, easily submit your solutions directly with the click of a button!
-
-Cph supports a large number of popular platforms like Codeforces, Codechef,
-TopCoder etc. with the help of competitive companion browser extension
-
-![Screenshot](screenshots/screenshot-main.png)
-
-## Quick start
-
-1. [Install cph](https://marketplace.visualstudio.com/items?itemName=DivyanshuAgrawal.competitive-programming-helper)
-   in VS Code and open any folder.
-1. [Install competitive companion](https://github.com/jmerle/competitive-companion#readme)
-   in your browser.
-1. Use Companion by pressing the green plus (+) circle from the browser toolbar
-   when visiting any problem page.
-1. The file opens in VS Code with testcases preloaded. Press
-   <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd> to run them.
-
--   (Optional) Install the [cph-submit](https://github.com/agrawal-d/cph-submit)
-    browser extension to enable submitting directly on CodeForces.
--   (Optional) Install submit client and config file from the
-    [Kattis help page](https://open.kattis.com/help/submit) after logging in.
-
-You can also use this extension locally, just open any supported file and press
-'Run Testcases' (or <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>B</kbd>) to manually
-enter testcases.
-
-[![See detailed user guide](https://img.shields.io/badge/-Read%20detailed%20usage%20guide-blue?style=for-the-badge)](docs/user-guide.md)
-
-## Features
-
--   Automatic compilation with display for compilation errors.
--   Intelligent judge with support for signals, timeouts and runtime errors.
--   Works with Competitive Companion.
--   [Codeforces auto-submit](https://github.com/agrawal-d/cph-submit)
-    integration.
--   [Kattis auto-submit](docs/user-guide.md) integration.
--   Works locally for your own problems.
--   Support for several languages.
-
-## Supported Languages
-
--   C++
--   C
--   Rust
--   Go
--   Haskell
--   Python
--   Ruby
--   Java
--   JavaScript (Node.js)
-
-## Contributing
-
-You can contribute to this extension in many ways:
-
--   File bug reports by creating issues.
--   Develop this extension further - see [developer guide](docs/dev-guide.md).
--   Spreading the word about this extension.
-
-**Before creating a Pull Request, please create an issue to discuss the
-approach. It makes reviewing and accepting the PR much easier.**
-
-## Telemetry
-
-The extension collects basic events defined in `src/telmetry.ts`. To disable,
-modify the setting `telemetry.telemetryLevel` (applies to all VSCode
-extensions).
+dotnet run --project {프로젝트폴더} 로 테스트 케이스가 실행되기 때문에 문제점이 많음.
+1. 여러 개의 테스트 케이스 실행 시 매번 빌드가 되는 단점 있음.
+2. 문제 불러오기 자체는 잘 작동하나 한 프로젝트에 2개 이상의 cs파일이 존재할 경우 생기는 문제는 알아서 해결하여야 함.
+3. ONLINE_JUDGE 또는 커스텀 Args, Command같은 설정은 반영되지 않음.
 
 ## License
 
