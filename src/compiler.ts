@@ -110,6 +110,19 @@ const getFlags = (language: Language, srcPath: string): string[] => {
             ];
             break;
         }
+/**
+        case 'cs': {
+            const projDir = srcPath.replace(/\\[^\\]*$/, '');
+            ret = [
+                'build',
+                projDir,
+                '-o',
+                projDir + '\\bin',
+                ...args,
+            ];
+            break;
+        }
+*/
         default: {
             ret = [];
             break;

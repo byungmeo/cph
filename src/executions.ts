@@ -93,6 +93,17 @@ export const runTestCase = (
             process = spawn('java', args);
             break;
         }
+        case 'cs': {
+            const projDir = binPath.replace(/\\[^\\]*$/, '');
+
+            const args: string[] = [];
+            args.push('run');
+            args.push('--project');
+            args.push(`${projDir}`);
+            
+            process = spawn('dotnet', args);
+            break;
+        }
         default: {
             process = spawn(binPath, spawnOpts);
         }

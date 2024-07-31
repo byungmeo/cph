@@ -20,6 +20,7 @@ export default {
         js: 'js',
         go: 'go',
         hs: 'hs',
+        cs: 'cs',
     },
     compilers: {
         c: 'gcc',
@@ -31,6 +32,7 @@ export default {
         js: 'node',
         go: 'go',
         hs: 'hs',
+        cs: 'dotnet',
     },
     compilerToId: {
         'GNU G++17 7.3.0': 54,
@@ -54,6 +56,8 @@ export default {
         'Go 1.19.5': 32,
         'Rust 1.66.0 (2021)': 75,
         'Haskell GHC 8.10.1': 12,
+        'C# 8, .NET Core 3.1': 65,
+        'C# 10, .NET SDK 6.0': 79,
     },
     supportedExtensions: [
         'py',
@@ -65,6 +69,7 @@ export default {
         'go',
         'hs',
         'rb',
+        'cs',
     ],
     skipCompile: ['py', 'js', 'rb'],
 };

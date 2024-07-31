@@ -249,6 +249,26 @@
                     "default": "javac",
                     "description": "Command used to compile java files."
                 },
+                "cph.language.cs.Args": {
+                    "title": "Compilation flags for CSharp",
+                    "type": "string",
+                    "default": "",
+                    "description": "Space seperated additional flags passed to javac while compiling your file. Example '-verbose'"
+                },
+                "cph.language.cs.SubmissionCompiler": {
+                    "type": "string",
+                    "default": "C# 10, .NET SDK 6.0",
+                    "enum": [
+                        "C# 10, .NET SDK 6.0",
+                        "C# 8, .NET Core 3.1"
+                    ],
+                    "description": "The compiler chosen in the drop down during Codeforces submission for CSharp"
+                },
+                "cph.language.cs.Command": {
+                    "type": "string",
+                    "default": "dotnet",
+                    "description": "Command used to compile CSharp files."
+                },
                 "cph.language.js.Args": {
                     "title": "Compilation flags for JavaScript",
                     "type": "string",
@@ -286,7 +306,8 @@
                         "rust",
                         "js",
                         "java",
-                        "ruby"
+                        "ruby",
+                        "cs"
                     ],
                     "description": "The default language for problems imported via Competitive Companion (None will give option to select language on importing problem every time)"
                 },

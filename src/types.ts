@@ -39,6 +39,9 @@ export type prefSection =
     | 'language.haskell.Args'
     | 'language.haskell.SubmissionCompiler'
     | 'language.haskell.Command'
+    | 'language.cs.Args'
+    | 'language.cs.SubmissionCompiler'
+    | 'language.cs.Command'
     | 'general.retainWebviewContext'
     | 'general.autoShowJudge'
     | 'general.defaultLanguageTemplateFileLocation';
@@ -59,7 +62,8 @@ export type LangNames =
     | 'java'
     | 'js'
     | 'go'
-    | 'hs';
+    | 'hs'
+    | 'cs';
 
 export type TestCase = {
     input: string;
