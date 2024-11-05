@@ -129,8 +129,12 @@ export const runTestCase = (
             console.log('Run Result:', result);
             resolve(result);
         });
-
+        
         process.stdout.on('data', (data) => {
+            if (language.name == 'cs' && data.toString().includes('')) {
+                // reference : https://github.com/dotnet/sdk/issues/44610
+                return;
+            }
             result.stdout += data;
         });
         process.stderr.on('data', (data) => (result.stderr += data));
