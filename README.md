@@ -1,4 +1,8 @@
 # Competitive Programming Helper (cph) + C#
+cph에서 정식으로 C#을 지원하게 되었습니다 만세~
+
+---
+
 C# 호환 가능
 
 오직 Test Case Judge 기능 호환에만 중점을 두고 수정 함.
